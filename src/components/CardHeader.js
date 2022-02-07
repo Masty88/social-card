@@ -23,17 +23,17 @@ const Avatar= styled.div`
 `
 
 const Title= styled.div`
-  width: 50%;
+  width: 70%;
   text-align: left;
-  margin-left: 50px;
+  margin-left: 5px;
 `
 
-const CardHeader = ({title}) => {
+const CardHeader = ({author}) => {
     return (
         <HeaderContainer>
             <Avatar/>
             <Title>
-                {title}
+                {author}
             </Title>
         </HeaderContainer>
     );

@@ -19,7 +19,7 @@ const Card = ({title, content,socialId}) => {
 
     return (
            <CardContainer>
-               <CardHeader title={title}/>
+               <CardHeader title={title} author="Emanuele Mastaglia"/>
                <CardBody content={content}/>
                <CardFooter socialId={socialId}/>
            </CardContainer>

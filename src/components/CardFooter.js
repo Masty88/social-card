@@ -93,17 +93,17 @@ const CardFooter = ({socialId}) => {
             setComment(false)
         }else{
             setComment(true)
-            setShowComments(false)
         }
     }
 
-    const [showComments,setShowComments]= useState(false)
+    const [showComments,setShowComments]= useState(true)
     const manageShowComments=()=>{
         if(showComments){
             setShowComments(false)
         }else{
             setShowComments(true)
-        }
+
+    }
     }
 
     return (
@@ -112,7 +112,7 @@ const CardFooter = ({socialId}) => {
                 <ActionContainer>
                     <IconContext.Provider value={{ color: "blue", size: "2em", style:{ marginRight: "20px"}}}>
                         <button style={{border:"none", backgroundColor:"transparent" }} onClick={()=>manageComment()}>
-                            <BiComment/>
+                            <BiComment />
                         </button>
                     </IconContext.Provider>
 
@@ -129,7 +129,7 @@ const CardFooter = ({socialId}) => {
                 {comment?
                     <Reply>
                         <Content>
-                            <AddComment onClick={()=>manageShowComments()}/>
+                            <AddComment socialId={socialId} onClick={()=>setShowComments(true)}/>
                             {showComments?
                                 <CommentList socialId={socialId}/>:
                                 <></>

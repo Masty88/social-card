@@ -10,8 +10,10 @@ const AddComment = ({onClick, socialId}) => {
 
     const dispatch= useDispatch();
 
-    const onSubmit = (event) => {
-        event.preventDefault();
+
+    const onSubmit = (socialId) => {
+         // event.preventDefault();
+        console.log(socialId)
 
         if(value.trim().length === 0)
         {
@@ -22,7 +24,7 @@ const AddComment = ({onClick, socialId}) => {
         dispatch(
             addComment({
                 comment: value,
-                cardId: socialCards[0].id
+                cardId: socialId
             })
         );
 
@@ -41,7 +43,7 @@ const AddComment = ({onClick, socialId}) => {
                 onChange={(event) => setValue(event.target.value)}
             >
             </input>
-            <button className="task-button" onClick={onSubmit}>
+            <button className="task-button" onClick={()=>onSubmit(socialId)}>
                 Save
             </button>
         </div>

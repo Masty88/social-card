@@ -29,7 +29,7 @@ const AddSocialCard = ()=>{
             <input
                 type="text"
                 className="social-input"
-                placeholder="Add reply"
+                placeholder="Add post"
                 value={value}
                 onChange={(event) => setValue(event.target.value)}
             >
