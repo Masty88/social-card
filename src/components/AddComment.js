@@ -1,9 +1,13 @@
 import React, {useState} from 'react';
-import {useDispatch} from "react-redux";
+import {useDispatch, useSelector} from "react-redux";
 import {addComment} from "../redux/replySlice";
 
-const AddComment = ({onClick}) => {
+const AddComment = ({onClick, socialId}) => {
     const [value, setValue]= useState("")
+    const socialCards = useSelector((state)=>{
+        return state.social;
+    });
+
     const dispatch= useDispatch();
 
     const onSubmit = (event) => {
@@ -17,7 +21,8 @@ const AddComment = ({onClick}) => {
 
         dispatch(
             addComment({
-                comment: value
+                comment: value,
+                cardId: socialCards[0].id
             })
         );
 

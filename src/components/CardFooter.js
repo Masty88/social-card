@@ -76,7 +76,7 @@ const Content=styled.div`
   border-bottom-right-radius: 10px;
 `
 
-const CardFooter = () => {
+const CardFooter = ({socialId}) => {
 
     const [liked,setLiked]= useState(false)
     const manageLike=()=>{
@@ -104,7 +104,6 @@ const CardFooter = () => {
         }else{
             setShowComments(true)
         }
-        console.log(showComments)
     }
 
     return (
@@ -132,7 +131,7 @@ const CardFooter = () => {
                         <Content>
                             <AddComment onClick={()=>manageShowComments()}/>
                             {showComments?
-                                <CommentList/>:
+                                <CommentList socialId={socialId}/>:
                                 <></>
                             }
                         </Content>

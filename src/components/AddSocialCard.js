@@ -28,7 +28,7 @@ const AddSocialCard = ()=>{
         <div className="add-social-card" >
             <input
                 type="text"
-                className="reply-input"
+                className="social-input"
                 placeholder="Add reply"
                 value={value}
                 onChange={(event) => setValue(event.target.value)}
@@ -40,3 +40,5 @@ const AddSocialCard = ()=>{
         </div>
     )
 }
+
+export default AddSocialCard;

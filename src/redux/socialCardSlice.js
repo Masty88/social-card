@@ -7,10 +7,12 @@ export const socialCardSlice= createSlice({
         addSocialCard: (state, action)=>{
             const newSocialCard = {
                 id: Date.now(),
-                content: action.payload.content
+                content: action.payload.content,
+                comment:[]
             }
             state.push(newSocialCard);
-        }
+        },
+
     }
 })
 

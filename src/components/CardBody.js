@@ -4,13 +4,17 @@ import styled from "styled-components";
 const CardBodyContainer= styled.div`
    background-color: darkcyan;
     width: 100%;
-    height: 100%;
+    height: auto;
+    min-height: 90px;
+    display: flex;
+    padding: 20px;
+    box-sizing: border-box;
 `
 
-const CardBody = () => {
+const CardBody = ({content}) => {
     return (
         <CardBodyContainer>
-
+            {content}
         </CardBodyContainer>
     );
 };

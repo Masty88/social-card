@@ -15,13 +15,13 @@ const CardContainer= styled.div`
     flex-direction: column;
 `
 
-const Card = ({title}) => {
+const Card = ({title, content,socialId}) => {
 
     return (
            <CardContainer>
                <CardHeader title={title}/>
-               <CardBody/>
-               <CardFooter/>
+               <CardBody content={content}/>
+               <CardFooter socialId={socialId}/>
            </CardContainer>
     );
 };

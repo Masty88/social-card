@@ -2,12 +2,15 @@ import {createSlice} from "@reduxjs/toolkit";
 
 export const commentSlice= createSlice({
     name: "comment",
-    initialState:[],
+    initialState:[
+
+    ],
     reducers:{
         addComment: (state, action)=>{
             const newComment = {
                 id: Date.now(),
-                comment: action.payload.comment
+                comment: action.payload.comment,
+                cardId: action.payload.cardId
             }
             state.push(newComment);
         }
