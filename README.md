@@ -1,2 +1,5 @@
-# Getting Started with Create React App
+# Post creator
+Todo: 
+add ui
+
 
